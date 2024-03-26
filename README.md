@@ -1,3 +1,12 @@
+from urllib.request import Request, urlopen
+from bs4 import BeautifulSoup
+
+site= "https://www.fortytwo.sg/dining/dining-tables/landon-regular-dining-table-coffee.html"
+hdr = {'User-Agent': 'Mozilla/5.0'}
+req = Request(site,headers=hdr)
+page = urlopen(req)
+soup = BeautifulSoup(page, 'html.parser')
+
 # Introductory Programming Using Python (25 and 26 Mar 2024) 
 
 Course materials are contained in this repository
